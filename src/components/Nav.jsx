@@ -12,7 +12,7 @@ function Nav() {
     return (
         <nav>
             <ul>
-                {navLinks.forEach((nav, index) => {
+                {navLinks.map((nav, index) => {
                     return (
                         <li key={index}>
                             <a href={nav.link}>{nav.name}</a>
