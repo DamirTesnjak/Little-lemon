@@ -2,8 +2,8 @@ import React from "react";
 
 function Header() {
     return (
-        <header>
-            <img src="" alt="Little lemon logo"/>
+        <header className="header">
+            <img src="LittleLemon.jpg" alt="Little lemon logo" width='300px'/>
         </header>
     )
 }

@@ -1,6 +1,9 @@
 import React from "react";
 
-function Nav() {
+function Nav(props) {
+    const {
+        isInFooter
+    } = props
     const navLinks = [
         { name: 'Home', link: '/' },
         { name: 'About', link: '/' },
@@ -10,11 +13,11 @@ function Nav() {
         { name: 'Login', link: '/' },
     ]
     return (
-        <nav>
-            <ul>
+        <nav className="nav">
+            <ul className={isInFooter ? "link-list-footer" : "link-list"}>
                 {navLinks.map((nav, index) => {
                     return (
-                        <li key={index}>
+                        <li className={isInFooter ? "list-footer" : "list"} key={index}>
                             <a href={nav.link}>{nav.name}</a>
                         </li>
                     )

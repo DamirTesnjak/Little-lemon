@@ -1,17 +1,22 @@
 import React from "react";
 
 function Special(props) {
-    const { dish, description, image } = props;
+    const { dish, price, description, image } = props;
     return (
-        <>
-            <img src={image} alt={dish} />
-            <h4>{dish}</h4>
-            <p>{description}</p>
-            <>
-                <p>Order a delivery</p>
-                <img src={image} alt="" />
-            </>
-        </>
+        <div className="special">
+            <img
+                className="special-image"
+                src={image}
+                alt={dish}
+            />
+            <h4 className="special-dish-title">{dish}</h4>
+            <h4 className="special-dish-title">${price}</h4>
+            <p className="special-dish-description">{description}</p>
+            <div className="special-order-delivery">
+                <p className="special-order-text">Order a delivery</p>
+                <img className="delivery-logo" src="assets/f21897ecfdee7d5927d1ec7b61408485ab9f6838.jpg" alt="" />
+            </div>
+        </div>
     )
 }
 
