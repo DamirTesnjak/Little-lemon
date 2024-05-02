@@ -10,6 +10,14 @@ function MainBookingPage(props) {
         occation: '',
     })
 
+    function validation() {
+        const { date, time, guests, occation } = formValues;
+        if(date.length > 0 && time.length > 0 && guests > 0 && occation.length > 0) {
+            return true
+        }
+        return false
+    }
+
     function handleChange(date) {
         setFormValues({
             ...formValues,
@@ -51,6 +59,7 @@ function MainBookingPage(props) {
                     })}
                     required
                 >
+                     <option value="">Select a Time</option>
                     {availableTimes.availableTimes.map((option) => <option key={option} value={option}>{option}</option>)}
                 </select>
                 <label for="guests">Number of guests</label>
@@ -80,7 +89,14 @@ function MainBookingPage(props) {
                     <option value="Birthday">Birthday</option>
                     <option value="Anniversary">Anniversary</option>
                 </select>
-                <input className="button" type="submit" value="Make Your reservation"></input>
+                <input
+                    id="submitButton"
+                    className="button"
+                    type="submit"
+                    value="Make Your reservation"
+                    style={{ backgroundColor: validation() ? "#EDEFEE" : "#F4CE14"}}
+                    disabled={validation()}
+                ></input>
             </form>
         </div>
     )
