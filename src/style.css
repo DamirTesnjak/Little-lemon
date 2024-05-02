@@ -1,4 +1,4 @@
-button {
+button, .button {
     width: 200px;
     height: 43px;
     border: 0px;
@@ -8,6 +8,7 @@ button {
     font-family: "Karla", sans-serif;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 ul {
@@ -16,11 +17,43 @@ ul {
     padding: 0;
 }
 
+label, input, option {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+}
+
+label {
+    color: #F4CE14;;
+}
+
 .App {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
+}
+
+.BookingPage {
+    width: 100%;
+    background-color: #495E57;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.booking-subtitle {
+    width: 100%;
+    color: #ffffff;
+    font-family: "Karla", sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    margin: 50px;
 }
 
 .header {
@@ -258,4 +291,26 @@ ul {
 
 .rating {
     padding: 10px;
+}
+
+#res-date, select, #guests  {
+    height: 40px;
+    border: 0px;
+    border-radius: 6px;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+}
+
+.confirmed-booking {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    background-color: #495E57;
+    text-align: center;
+    flex-wrap: wrap;
+    color: #ffffff;
+    font-family: "Karla", sans-serif;
+    font-size: 25px;
+    height: 60vh;
 }

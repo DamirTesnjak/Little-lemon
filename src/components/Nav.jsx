@@ -6,9 +6,9 @@ function Nav(props) {
     } = props
     const navLinks = [
         { name: 'Home', link: '/' },
-        { name: 'About', link: '/' },
-        { name: 'Menu', link: '/' },
-        { name: 'Reservations', link: '/' },
+        { name: 'About', link: '/#about' },
+        { name: 'Menu', link: '/#menu' },
+        { name: 'Reservations', link: '/booking' },
         { name: 'Order Online', link: '/' },
         { name: 'Login', link: '/' },
     ]
